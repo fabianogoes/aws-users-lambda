@@ -27,7 +27,9 @@ jobs:
 
     - name: Setup AWS CLI
       uses: aws-actions/configure-aws-credentials@v1
+    - name: Setup AWS CLI
+      uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-west-2 # Modify this to your desired AWS region
+        aws-region: us-east-1 # Modify this to your desired AWS region
