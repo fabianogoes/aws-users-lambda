@@ -23,6 +23,9 @@ jobs:
       - name: AWS Command Run
         run: |
           aws sts get-caller-identity
+          python3 -m venv .venv
+          source .venv/bin/activate
           pip install -r requirements.txt
+          cp -r .venv/lib/python3.10/site-packages/* .
           zip -r lambda_function.zip .env *.py
           aws lambda update-function-code --function-name tech-challenge-users-lambda --zip-file fileb://./lambda_function.zip
