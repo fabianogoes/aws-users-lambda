@@ -32,7 +32,6 @@ jobs:
           cp -r .venv/lib/python3.10/site-packages/dotenv ./dotenv   
           cp -r .venv/lib/python3.10/site-packages/dotenv ./boto3          
           zip -r lambda_function.zip jwt/ dotenv/ boto3/ .env lambda_function.py
-          ls -la
       - name: Deploy
         run: |
           aws lambda update-function-code --function-name tech-challenge-users-lambda --zip-file fileb://./lambda_function.zip          

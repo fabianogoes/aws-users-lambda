@@ -22,7 +22,6 @@ database = [
 
 def lambda_handler(event, context):
     print("*********** Users Pool the event is: *************")
-    print("Test GitHub Actions.....")
     print(event)
 
     data = event['cpf']
