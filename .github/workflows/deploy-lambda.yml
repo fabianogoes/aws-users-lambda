@@ -14,10 +14,7 @@ on:
       - main
     paths:
       - '**.py' # Change to the file extension of the language that you are using.
-permissions:
-      id-token: write # This is required for aws oidc connection
-      contents: read # This is required for actions/checkout
-      pull-requests: write # This is required for gh bot to comment PR
+      
 jobs:
   deploy:
 
@@ -28,12 +25,14 @@ jobs:
       with:
         fetch-depth: 2 # To fetch the current commit and its parent (so we can compare)
 
-    - name: Setup AWS CLI
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        environment: prod
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1 
+    - name: Show Secrets
+      run: |
+        echo ${{ secrets.AWS_ACCESS_KEY_ID }}
+    # - name: Setup AWS CLI
+    #   uses: aws-actions/configure-aws-credentials@v1
+    #   with:
+    #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     aws-region: us-east-1 
 
         
