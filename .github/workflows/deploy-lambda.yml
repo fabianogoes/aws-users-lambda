@@ -20,12 +20,17 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           lambda_layer_publish: true
-      - name: AWS Command Run
+      - name: AWS get-caller-identity
         run: |
           aws sts get-caller-identity
+      - name: Build
+        run: |
           python3 -m venv .venv
           source .venv/bin/activate
           pip install -r requirements.txt
-          cp -r .venv/lib/python3.10/site-packages/* .
+          cp -r .venv/lib/python3.10/site-packages/* .          
           zip -r lambda_function.zip .env *.py
-          aws lambda update-function-code --function-name tech-challenge-users-lambda --zip-file fileb://./lambda_function.zip
+          ls -la
+      - name: Deploy
+        run: |
+          aws lambda update-function-code --function-name tech-challenge-users-lambda --zip-file fileb://./lambda_function.zip          
