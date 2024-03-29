@@ -64,7 +64,7 @@ aws lambda create-function --function-name fiap-tech-challenge-users-lambda \
 ## Para atualizar a lambda por `awscli`
 
 ```shell
-aws lambda update-function-code --function-name tech-challenge-users-lambda --zip-file fileb://./lambda_function.zip
+aws lambda update-function-code --function-name fiap-tech-challenge-users-lambda --zip-file fileb://./lambda_function.zip
 ```
 
 ## Important References
