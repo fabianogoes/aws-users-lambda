@@ -47,7 +47,7 @@ if __name__ == '__main__':
     print("--- Running locally ---")
     context = None
     event = {
-        'cpf': '11133344455'
+        'cpf': '11133344456'
     }
 
     print(lambda_handler(event, context))

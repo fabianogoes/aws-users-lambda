@@ -34,4 +34,4 @@ jobs:
           zip -r lambda_function.zip jwt/ dotenv/ boto3/ .env lambda_function.py
       - name: Deploy
         run: |
-          aws lambda update-function-code --function-name tech-challenge-users-lambda --zip-file fileb://./lambda_function.zip          
+          aws lambda update-function-code --function-name fiap-tech-challenge-users-lambda --zip-file fileb://./lambda_function.zip          
