@@ -1,5 +1,7 @@
 # Users - Lambda Functions da API Tech Challenge
 
+[![deploy-py-lambda](https://github.com/fabianogoes/fiap-tech-challenge-users-lambda/actions/workflows/deploy-lambda.yml/badge.svg)](https://github.com/fabianogoes/fiap-tech-challenge-users-lambda/actions/workflows/deploy-lambda.yml)
+
 - [Users - Lambda Functions da API Tech Challenge](#users---lambda-functions-da-api-tech-challenge)
   - [Relationship](#relationship)
   - [Setup and Build](#setup-and-build)
