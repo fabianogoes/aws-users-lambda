@@ -21,7 +21,7 @@ database = [
 ]
 
 def lambda_handler(event, context):
-    print("*********** Users the event is: *************")
+    print("*********** Users Pool the event is: *************")
     print(event)
 
     data = event['cpf']
