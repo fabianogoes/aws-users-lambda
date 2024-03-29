@@ -22,7 +22,7 @@ database = [
 
 def lambda_handler(event, context):
     print("*********** Users Pool the event is: *************")
-    print("Test.")
+    print("Test..")
     print(event)
 
     data = event['cpf']
