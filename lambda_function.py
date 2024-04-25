@@ -22,6 +22,7 @@ database = [
 
 def lambda_handler(event, context):
     print("*********** Users Pool the event is: *************")
+    # deploy test 2024-04-25-1
     print(event)
 
     data = event['cpf']
