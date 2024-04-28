@@ -5,6 +5,7 @@ from jwt.exceptions import ExpiredSignatureError
 
 load_dotenv()
 SECRET = os.getenv("SECRET")
+VERSION = "2024-04-28-2"
 
 class User: 
     def __init__(self, cpf, name, email): 
@@ -22,7 +23,7 @@ database = [
 
 def lambda_handler(event, context):
     print("*********** Users Pool the event is: *************")
-    # deploy test 2024-04-28-1
+    print(VERSION)
     print(event)
 
     data = event['cpf']
